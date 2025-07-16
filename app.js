@@ -6,10 +6,16 @@ const pauseBtn = document.querySelector('.btn-pause');
 const session = document.querySelector('.minutes');
 let myInterval;
 let state = true;
+let isPaused = false;
 let remainingSeconds;
 
 // functions
 const appTimer = () => {
+    if (isPaused) {
+        alert('The timer is paused. Please press pause again to resume or reset.');
+        return;
+    }
+
     const sessionAmount = Number.parseInt(session.textContent);
 
     if (state) {
@@ -67,8 +73,10 @@ const pauseTimer = () => {
     if (!state) {
         clearInterval(myInterval);
         state = true
+        isPaused = true;
     } else {
-        state = false // set state t false to indicate timer is running
+        state = false; // set state t false to indicate timer is running
+        isPaused = false;
         const updateSeconds = () => {
             // code 
             const minuteDiv = document.querySelector('.minutes');

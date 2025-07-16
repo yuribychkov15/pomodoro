@@ -1,11 +1,13 @@
 html {
     font-family: 'Fira Sans', sans-serif;
     font-size: 20px;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff;
     letter-spacing: 0.8px;
     min-height: 100vh;
     color: #d8e9ef;
-    background-image: linear-gradient(-20deg, #025159 0%, #733b36 100%);
+    background-image: url('https://i.pinimg.com/originals/a3/3a/11/a33a11148420d83acc5d073b1f742f24.gif');
     background-size: cover;
+    background-color: beige;
 }
 
 h1 {
@@ -72,11 +74,11 @@ p {
 }
 
 .circle {
-    border-color: #bf5239;
+    border-color: #a661d0;
 }
 
 .circle-mask {
-    border-color: #e85a71;
+    border-color: #af5ae8;
 }
 
 .app-counter-box {
@@ -97,6 +99,7 @@ button {
     background: none;
     outline: none;
     color: #d8e9ef;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff;
 }
 
 button:hover {
